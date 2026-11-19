@@ -1,3 +1,6 @@
 /target/
 /dist/
-*.key
+/plugins/
+/publishers/
+build.sh
+*.oiplugin

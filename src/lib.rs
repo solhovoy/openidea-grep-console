@@ -5,7 +5,7 @@ use openidea_plugin::{
 use serde::{Deserialize, de::DeserializeOwned};
 use serde_json::Value;
 
-const SCHEMA: &str = include_str!("../settings.schema.json");
+const SCHEMA: &str = include_str!("../settings/settings.json");
 
 #[derive(Deserialize)]
 #[serde(rename_all = "camelCase")]

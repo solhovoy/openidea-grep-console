@@ -17,4 +17,4 @@ category = "Grep Console"
 
 [contributes.settings]
 title = "Grep Console"
-schema = "settings.schema.json"
+schema = "settings/settings.json"
