@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "title": "Enable console highlighting",
+      "default": true
+    },
+    "rules": {
+      "type": "array",
+      "title": "Highlight rules",
+      "description": "Applied to Run and Debug output in every window. First matching whole-line rule wins; match-only rules overlay it. Maximum 100 rules, 512 UTF-8 bytes per pattern. Empty colors and style preserve the original appearance.",
+      "default": [
+        { "enabled": true, "pattern": "\\b(ERROR|FATAL)\\b", "ignoreCase": true, "foreground": "bright-red", "background": "", "style": "bold", "wholeLine": true },
+        { "enabled": true, "pattern": "\\bWARN(ING)?\\b", "ignoreCase": true, "foreground": "bright-yellow", "background": "", "style": "", "wholeLine": true },
+        { "enabled": true, "pattern": "\\bINFO\\b", "ignoreCase": false, "foreground": "green", "background": "", "style": "bold", "wholeLine": false }
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "title": "Enabled", "default": true },
+          "pattern": { "type": "string", "title": "Regular expression", "default": "" },
+          "foreground": {
+            "type": "string",
+            "title": "Text color",
+            "enum": ["", "black", "red", "green", "yellow", "blue", "magenta", "cyan", "white", "bright-black", "bright-red", "bright-green", "bright-yellow", "bright-blue", "bright-magenta", "bright-cyan", "bright-white"],
+            "default": "bright-red"
+          },
+          "background": {
+            "type": "string",
+            "title": "Background color",
+            "enum": ["", "black", "red", "green", "yellow", "blue", "magenta", "cyan", "white", "bright-black", "bright-red", "bright-green", "bright-yellow", "bright-blue", "bright-magenta", "bright-cyan", "bright-white"],
+            "default": ""
+          },
+          "style": {
+            "type": "string",
+            "title": "Style",
+            "enum": ["", "bold", "italic", "underline", "strikethrough", "dim"],
+            "default": ""
+          },
+          "wholeLine": { "type": "boolean", "title": "Whole line", "default": false },
+          "ignoreCase": { "type": "boolean", "title": "Ignore case", "default": false }
+        }
+      }
+    }
+  }
+}
