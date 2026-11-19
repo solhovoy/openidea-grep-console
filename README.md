@@ -1,6 +1,9 @@
 # Grep Console for OpenIDEA
 
 A small plugin for coloring Run/Debug stdout and stderr with regular expressions.
+Inspired by the original [Grep Console](https://github.com/krasa/grepconsole)
+plugin for IntelliJ IDEA.
+
 Requires plugin API **1.12+**; the SDK is pinned to the API 1.12 revision.
 It does not read console output. The `events` capability is used only to reload
 rules when settings change.
