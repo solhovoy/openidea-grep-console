@@ -1,0 +1,20 @@
+id = "solhovoy.grep-console"
+name = "Grep Console"
+version = "0.1.0"
+description = "Color Run and Debug output with configurable regular-expression rules."
+categories = ["tools"]
+engines.openidea = "^1.12"
+wasm = "dist/plugin.wasm"
+activation = ["on-startup-finished", "on-command:*", "on-event:settings-changed"]
+
+[capabilities]
+required = ["events"]
+
+[[contributes.commands]]
+id = "reload"
+title = "Grep Console: Reload Rules"
+category = "Grep Console"
+
+[contributes.settings]
+title = "Grep Console"
+schema = "settings.schema.json"
